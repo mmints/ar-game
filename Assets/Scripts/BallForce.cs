@@ -10,6 +10,6 @@ public class BallForce : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb_Ball = GetComponent<Rigidbody>();
-		rb_Ball.AddForce (0, 0, force, ForceMode.Impulse);
+		//rb_Ball.AddForce (0, 0, force, ForceMode.Impulse);
 	}	
 }
