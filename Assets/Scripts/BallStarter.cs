@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallStarter : MonoBehaviour {
 
 	public float maxForce;
+	public string inputName;
 
 	private float force;
 	private Rigidbody rb_Ball;
@@ -32,7 +33,7 @@ public class BallStarter : MonoBehaviour {
 		Debug.Log (ball.gameObject.name + " stay on start position " + "(" + debugCounter + ")");
 		rb_Ball = ball.gameObject.GetComponent<Rigidbody>();
 
-		if (Input.GetAxis ("Fire") == 1 && force <= maxForce) {
+		if (Input.GetAxis (inputName) == 1 && force <= maxForce) {
 			force += 0.2f;
 
 			Debug.Log ("Force: "  + force);

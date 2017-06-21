@@ -1,4 +1,4 @@
-﻿﻿using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,7 +27,8 @@ public class FlipperController : MonoBehaviour {
 
 		if (Input.GetAxis(inputName) == 1)
 		{
-			spring.targetPosition = pressedPosition;            
+			spring.targetPosition = pressedPosition;
+			Debug.Log ("Hit left flipper");
 		}
 		else
 		{
