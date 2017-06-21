@@ -33,7 +33,7 @@ public class BallStarter : MonoBehaviour {
 		rb_Ball = ball.gameObject.GetComponent<Rigidbody>();
 
 		if (Input.GetAxis ("Fire") == 1 && force <= maxForce) {
-			force += 0.35f;
+			force += 0.2f;
 
 			Debug.Log ("Force: "  + force);
 		}
@@ -42,19 +42,5 @@ public class BallStarter : MonoBehaviour {
 			Debug.Log ("Fire ball!");
 		}
 	}
-
-	void Update(){
-		if (Input.GetAxis ("Fire") == 1) {
-			foreach (Transform child in transform) {
-				child.position -= Vector3.forward * 0.1F;
-			}
-		}
-		else {
-			foreach (Transform child in transform) {
-				child.position = restPosition;
-			}
-		}
-
-	}
-
+		
 }
