@@ -6,11 +6,22 @@ public class ObjectForce : MonoBehaviour {
 	public float force;
 	private Rigidbody rb;
 
+	private int points;
+
+	void start () {
+		points = 0;
+	}
+
 	void OnCollisionEnter (Collision col)
 	{
 		
 		rb = col.gameObject.GetComponent<Rigidbody>();
 		rb.AddExplosionForce (force, this.transform.position, 5);
-		Debug.Log (col.gameObject.name + " hits ");
+		points += 100;
 	}
+
+	void OnGUI() {
+		GUILayout.Label("\n" + "Points: " + points);
+	}
+
 }
