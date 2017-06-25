@@ -30,8 +30,8 @@ public class BallStarter : MonoBehaviour {
 	void OnTriggerStay (Collider ball)
 	{
 		debugCounter += 1;
-		Debug.Log (ball.gameObject.name + " stay on start position " + "(" + debugCounter + ")");
-		rb_Ball = ball.gameObject.GetComponent<Rigidbody>();
+		//Debug.Log (ball.gameObject.name + " stay on start position " + "(" + debugCounter + ")");
+		rb_Ball = ball.GetComponent<Rigidbody>();
 
 		if (Input.GetAxis (inputName) == 1 && force <= maxForce) {
 			force += 0.2f;
@@ -40,7 +40,6 @@ public class BallStarter : MonoBehaviour {
 		}
 		else {
 			rb_Ball.AddForce (0, 0, force, ForceMode.Impulse);
-			Debug.Log ("Fire ball!");
 		}
 	}
 		

@@ -6,10 +6,10 @@ public class ObjectForce : MonoBehaviour {
 	public float force;
 	private Rigidbody rb;
 
-	private int points;
+	public int points;
 
 	void start () {
-		points = 0;
+		
 	}
 
 	void OnCollisionEnter (Collision col)
@@ -17,11 +17,8 @@ public class ObjectForce : MonoBehaviour {
 		
 		rb = col.gameObject.GetComponent<Rigidbody>();
 		rb.AddExplosionForce (force, this.transform.position, 5);
-		points += 100;
-	}
 
-	void OnGUI() {
-		GUILayout.Label("\n" + "Points: " + points);
+		// TODO: Implemets global point counter
 	}
-
+		
 }

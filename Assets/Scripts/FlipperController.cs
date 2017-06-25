@@ -25,7 +25,7 @@ public class FlipperController : MonoBehaviour {
 		spring.spring = hitStrenght;
 		spring.damper = flipperDamper;
 
-		if (Input.GetAxis(inputName) == 1)
+		if (Input.GetAxis(inputName) == 1 || Input.GetButton(inputName))
 		{
 			spring.targetPosition = pressedPosition;
 			Debug.Log ("Hit left flipper");
