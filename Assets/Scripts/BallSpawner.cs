@@ -3,15 +3,11 @@ using System.Collections;
 
 public class BallSpawner : MonoBehaviour {
 
-	public GameObject Ball;
-	// public Vector3 position;
+    public GameObject Ball;
+    public GameObject Spawn;
 
-	public GameObject Spawn;
-
-	void Start () {
-		// Instantiate (Ball, position, Quaternion.identity);
-		Instantiate (Ball, Spawn.transform.position, Quaternion.identity);
-		Debug.Log ("Create new ball.");
-	}
-
+    void Start() {
+        Instantiate(Ball, Spawn.transform.position, Quaternion.identity);
+        Debug.Log("Created new ball.");
+    }
 }

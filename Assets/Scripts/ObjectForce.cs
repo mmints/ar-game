@@ -3,22 +3,17 @@ using System.Collections;
 
 public class ObjectForce : MonoBehaviour {
 
-	public float force;
-	private Rigidbody rb;
+    public int points;
+    public float force;
+    private Rigidbody rigidBody;
 
-	public int points;
+    void Start() {}
 
-	void start () {
-		
-	}
+    void OnCollisionEnter(Collision collision) {
+        var gameObject = collision.gameObject;
+        rigidBody = gameObject.GetComponent<Rigidbody>();
+        rigidBody.AddExplosionForce(force, this.transform.position, 5);
 
-	void OnCollisionEnter (Collision col)
-	{
-		
-		rb = col.gameObject.GetComponent<Rigidbody>();
-		rb.AddExplosionForce (force, this.transform.position, 5);
-
-		// TODO: Implemets global point counter
-	}
-		
+        // TODO: implement global point counter
+    }
 }
