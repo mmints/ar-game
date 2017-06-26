@@ -10,6 +10,8 @@ public class BallStarter : MonoBehaviour {
     private float force;
     private Rigidbody rigidBody;
 
+	private bool btnDown;
+
     private int debugCounter;
 
     void Start() {}
@@ -24,11 +26,20 @@ public class BallStarter : MonoBehaviour {
         //Debug.Log(ball.gameObject.name + " stay on start position " + "(" + debugCounter + ")");
 
         rigidBody = ball.GetComponent<Rigidbody>();
-        if (Input.GetButton(inputName) && force <= maxForce) {
+        if (btnDown || Input.GetButton(inputName) && force <= maxForce) {
             force += 0.2f;
             Debug.Log("Force: "  + force);
         } else {
             rigidBody.AddForce(0, 0, force, ForceMode.Impulse);
         }
     }
+
+	public void holdButton() {
+		btnDown = true;
+	}
+
+	public void releaseButton() {
+		btnDown = false;
+	}
+
 }
