@@ -24,7 +24,7 @@ public class BallStarter : MonoBehaviour {
         //Debug.Log(ball.gameObject.name + " stay on start position " + "(" + debugCounter + ")");
 
         rigidBody = ball.GetComponent<Rigidbody>();
-        if (Input.GetAxis(inputName) == 1 && force <= maxForce) {
+        if (Input.GetButton(inputName) && force <= maxForce) {
             force += 0.2f;
             Debug.Log("Force: "  + force);
         } else {
