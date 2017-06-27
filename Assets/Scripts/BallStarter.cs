@@ -10,23 +10,17 @@ public class BallStarter : MonoBehaviour {
     private float force;
     private Rigidbody rigidBody;
 
-	private bool btnDown;
-
-    private int debugCounter;
+    private bool buttonDown;
 
     void Start() {}
 
     void OnTriggerEnter(Collider ball) {
-        debugCounter = 0;
         force = 0.0f;
     }
 
     void OnTriggerStay(Collider ball) {
-        debugCounter++;
-        //Debug.Log(ball.gameObject.name + " stay on start position " + "(" + debugCounter + ")");
-
         rigidBody = ball.GetComponent<Rigidbody>();
-        if (btnDown || Input.GetButton(inputName) && force <= maxForce) {
+        if (buttonDown || Input.GetButton(inputName) && force <= maxForce) {
             force += 0.2f;
             Debug.Log("Force: "  + force);
         } else {
@@ -34,12 +28,11 @@ public class BallStarter : MonoBehaviour {
         }
     }
 
-	public void holdButton() {
-		btnDown = true;
-	}
+    public void HoldButton() {
+        buttonDown = true;
+    }
 
-	public void releaseButton() {
-		btnDown = false;
-	}
-
+    public void ReleaseButton() {
+        buttonDown = false;
+    }
 }

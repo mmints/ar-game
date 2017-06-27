@@ -5,6 +5,7 @@ public class ObjectForce : MonoBehaviour {
 
     public int points;
     public float force;
+
     private Rigidbody rigidBody;
 
     void Start() {}

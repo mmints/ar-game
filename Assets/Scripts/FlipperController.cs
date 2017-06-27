@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class FlipperController : MonoBehaviour {
 
-	public Button inputButton;
+    public Button inputButton;
 
     public float restPosition;
     public float pressedPosition;
@@ -15,20 +15,20 @@ public class FlipperController : MonoBehaviour {
     public string inputName;
 
     private HingeJoint hinge;
-	private bool btnDown;
+    private bool buttonDown;
 
     void Start() {
         GetComponent<HingeJoint>().useSpring = true;
         hinge = GetComponent<HingeJoint>();
-		inputButton = GetComponent<Button> ();
+        inputButton = GetComponent<Button> ();
     }
-		
+
     void Update() {
         JointSpring spring = new JointSpring();
         spring.spring = hitStrenght;
         spring.damper = flipperDamper;
 
-		if (Input.GetButton(inputName) || btnDown){
+        if (Input.GetButton(inputName) || buttonDown){
             spring.targetPosition = pressedPosition;
             
         } else {
@@ -36,15 +36,13 @@ public class FlipperController : MonoBehaviour {
         }
         hinge.spring = spring;
         hinge.useLimits = true;
-
     }
 
-	public void holdButton() {
-		btnDown = true;
-	}
+    public void HoldButton() {
+        buttonDown = true;
+    }
 
-	public void releaseButton() {
-		btnDown = false;
-	}
-
+    public void ReleaseButton() {
+        buttonDown = false;
+    }
 }

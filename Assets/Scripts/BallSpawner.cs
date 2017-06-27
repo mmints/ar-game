@@ -3,11 +3,11 @@ using System.Collections;
 
 public class BallSpawner : MonoBehaviour {
 
-    public GameObject Ball;
-    public GameObject Spawn;
+    public GameObject ball;
+    public GameObject spawn;
 
     void Start() {
-        Instantiate(Ball, Spawn.transform.position, Quaternion.identity);
+        Instantiate(ball, spawn.transform.position, Quaternion.identity);
         Debug.Log("Created new ball.");
     }
 }
