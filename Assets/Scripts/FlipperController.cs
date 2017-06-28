@@ -8,12 +8,11 @@ public class FlipperController : MonoBehaviour {
 
     public Button inputButton;
 
-    public float restPosition;
-    public float pressedPosition;
-    public float hitStrenght;
-    public float flipperDamper;
-    public string inputName;
+	public float restPosition;
+	public float pressedPosition;
+	public string inputName;
 
+<<<<<<< Updated upstream
     private HingeJoint hinge;
     private bool buttonDown;
 
@@ -45,4 +44,30 @@ public class FlipperController : MonoBehaviour {
     public void ReleaseButton() {
         buttonDown = false;
     }
+=======
+	private bool btnDown;
+
+	private HingeJoint hinge;
+
+	void Start() {
+		Debug.Log ("Start FlipperController");
+	}
+
+	void Update() {
+		hinge = GetComponent<HingeJoint>();
+		bool pressed = Input.GetButton (inputName) || btnDown;
+		var spring = hinge.spring;
+		spring.targetPosition = pressed ? pressedPosition : restPosition;
+		hinge.spring = spring;
+		hinge.useSpring = true;
+	}
+
+	public void holdButton() {
+		btnDown = true;
+	}
+
+	public void releaseButton() {
+		btnDown = false;
+	}
+>>>>>>> Stashed changes
 }
