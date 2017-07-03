@@ -9,7 +9,7 @@ public class ReloadLevel : MonoBehaviour {
         }
     }
 
-    public void ReloadOnTouch() {
+    void ReloadOnTouch() {
         SceneManager.LoadScene("primitiveFlipper");
     }
 }
