@@ -50,6 +50,20 @@ To solve these issues, we may want to follow the issue trackers/forum
 -  Tilt-Device-Physics requires Accelerometer C# Code Snippet
    - Script File and Class name must match  
         
+#### Game Object Setup
+
+##### Flipper
+- Hinge Joint
+    - Spring: 5000
+    - Damper: 15
+    - Limit Min: 0 (left), -45 (right)
+    - Limit Max: 45 (left), 0 (right)
+- Flipper Controller
+    - Input Button: left or right button from canvas (Canvas has to be part of the scene!)
+    - Rest Position: 0 (L & R)
+    - -45 (left), 45 (right)
+    - Input Name: name of the input source witch is setted in the project preferences
+
   
   
 #### References
