@@ -17,7 +17,7 @@ public class TiltController : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetAxis(inputLeft) == 1 && tiltCounter < 3) {
+        /*if (Input.GetAxis(inputLeft) == 1 && tiltCounter < 3) {
             tiltCounter++;
             rigidBody.AddForce(-force, 0, 0, ForceMode.Impulse);
             Debug.Log("Tilt left (" + tiltCounter + ")");
@@ -26,6 +26,6 @@ public class TiltController : MonoBehaviour {
             tiltCounter++;
             rigidBody.AddForce(force, 0, 0, ForceMode.Impulse);
             Debug.Log("Tilt right (" + tiltCounter + ")");
-        }
+        }*/
     }
 }

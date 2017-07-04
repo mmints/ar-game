@@ -5,11 +5,11 @@ public class ReloadLevel : MonoBehaviour {
 
     void Update() {
         if (Input.GetAxis("Reload") == 1) {
-            SceneManager.LoadScene("primitiveFlipper");
+            SceneManager.LoadScene("toyFlipper");
         }
     }
 
     void ReloadOnTouch() {
-        SceneManager.LoadScene("primitiveFlipper");
+        SceneManager.LoadScene("toyFlipper");
     }
 }
