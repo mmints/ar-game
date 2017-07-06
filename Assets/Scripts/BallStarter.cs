@@ -24,7 +24,7 @@ public class BallStarter : MonoBehaviour {
             force += 0.2f;
             Debug.Log("Force: "  + force);
         } else {
-            rigidBody.AddForce(0, 0, force, ForceMode.Impulse);
+            rigidBody.AddForce(0, 0, -force, ForceMode.Impulse);
         }
     }
 
