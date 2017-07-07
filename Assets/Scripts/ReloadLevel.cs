@@ -3,13 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class ReloadLevel : MonoBehaviour {
 
-    void Update() {
-        if (Input.GetAxis("Reload") == 1) {
-            SceneManager.LoadScene("toyFlipper");
-        }
-    }
-
     void ReloadOnTouch() {
-        SceneManager.LoadScene("toyFlipper");
+        // FIXME: respawn ball instead, how it should be..
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class BallStarter : MonoBehaviour {
 
     public float maxForce;
-    public string inputName;
 
     private float force;
     private Rigidbody rigidBody;
@@ -20,11 +19,11 @@ public class BallStarter : MonoBehaviour {
 
     void OnTriggerStay(Collider ball) {
         rigidBody = ball.GetComponent<Rigidbody>();
-        if (buttonDown || Input.GetButton(inputName) && force <= maxForce) {
+        if (buttonDown && force <= maxForce) {
             force += 0.2f;
             Debug.Log("Force: "  + force);
         } else {
-            rigidBody.AddForce(0, 0, -force, ForceMode.Impulse);
+            rigidBody.AddForce(0, 0, force, ForceMode.Impulse);
         }
     }
 

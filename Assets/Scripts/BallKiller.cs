@@ -1,11 +1,19 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class BallKiller : MonoBehaviour {
 
-    void OnCollisionEnter(Collision collision) {
-        var gameObject = collision.gameObject;
-        Debug.Log(gameObject.name + " was killed!");
-        Destroy(gameObject);
+    public Text gameOverText;
+    public Text collisionText;
+
+    void OnTriggerEnter(Collider other) {
+        var gameObject = other.gameObject;
+	    if (gameObject.name == "Ball") {
+	        Debug.Log(gameObject.name + " was killed!");
+	        Destroy(gameObject);
+	        gameOverText.text = "Game Over!";
+	        collisionText.color = Color.red;
+	    }
     }
 }

@@ -6,34 +6,32 @@ using UnityEngine.EventSystems;
 
 public class FlipperController : MonoBehaviour {
 
-    public Button inputButton;
+	public float restPosition;
+	public float pressedPosition;
 
-    public float restPosition;
-    public float pressedPosition;
-    public string inputName;
+	private bool btnDown;
 
-    private bool btnDown;
+	private HingeJoint hinge;
 
-    private HingeJoint hinge;
+	void Start() {
+		Debug.Log ("Start FlipperController");
+	}
 
-    void Start() {
-        Debug.Log ("Start FlipperController");
-    }
+	void Update() {
+		hinge = GetComponent<HingeJoint>();
+		bool pressed = btnDown;
+		var spring = hinge.spring;
+		spring.targetPosition = pressed ? pressedPosition : restPosition;
+		hinge.spring = spring;
+		hinge.useSpring = true;
+	}
 
-    void Update() {
-        hinge = GetComponent<HingeJoint>();
-        bool pressed = Input.GetButton (inputName) || btnDown;
-        var spring = hinge.spring;
-        spring.targetPosition = pressed ? pressedPosition : restPosition;
-        hinge.spring = spring;
-        hinge.useSpring = true;
-    }
+	public void holdButton() {
+		btnDown = true;
+	}
 
-    void HoldButton() {
-        btnDown = true;
-    }
+	public void releaseButton() {
+		btnDown = false;
+	}
 
-    void ReleaseButton() {
-        btnDown = false;
-    }
 }
