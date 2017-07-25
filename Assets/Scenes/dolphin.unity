@@ -263,7 +263,7 @@ Transform:
   m_LocalScale: {x: 4.014215, y: 2.007107, z: 0.2}
   m_Children: []
   m_Father: {fileID: 983897782}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &169714033
 GameObject:
@@ -2165,6 +2165,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 834319799}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &853071198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 853071199}
+  m_Layer: 9
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &853071199
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 853071198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.097, y: 0.3528023, z: -4.492733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 983897782}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &871662538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,7 +2410,7 @@ GameObject:
   - component: {fileID: 902649127}
   - component: {fileID: 902649129}
   m_Layer: 9
-  m_Name: rightHinge
+  m_Name: RightHinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2501,7 +2529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2521,7 +2549,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Total Score: 0'
+  m_Text: 'Total Points: 0'
 --- !u!222 &973589764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2557,6 +2585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1877635469}
+  - {fileID: 853071199}
   - {fileID: 1599782681}
   - {fileID: 1164077712}
   - {fileID: 126454407}
@@ -3003,7 +3032,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 983897782}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1164077713
 MonoBehaviour:
@@ -3231,6 +3260,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8708f588ab7a4994806b9c87328abb5, type: 2}
   m_IsPrefabParent: 0
+--- !u!54 &1374977240 stripped
+Rigidbody:
+  m_PrefabParentObject: {fileID: 5410134, guid: d8708f588ab7a4994806b9c87328abb5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1374977239}
 --- !u!1 &1404992478
 GameObject:
   m_ObjectHideFlags: 0
@@ -3248,7 +3282,7 @@ GameObject:
   - component: {fileID: 1404992480}
   - component: {fileID: 1404992486}
   m_Layer: 9
-  m_Name: rightFlipper
+  m_Name: RightFlipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3676,7 +3710,7 @@ Transform:
   - {fileID: 102057597}
   - {fileID: 1101959559}
   m_Father: {fileID: 983897782}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1599782682
 MonoBehaviour:
@@ -4023,7 +4057,7 @@ GameObject:
   - component: {fileID: 1791301541}
   - component: {fileID: 1791301547}
   m_Layer: 9
-  m_Name: leftFlipper
+  m_Name: LeftFlipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4788,7 +4822,7 @@ GameObject:
   - component: {fileID: 1978026125}
   - component: {fileID: 1978026127}
   m_Layer: 9
-  m_Name: leftHinge
+  m_Name: LeftHinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4911,6 +4945,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f248fca28f0dc4987aec5a09ccbb180b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 1374977240}
+  spawnPoint: {fileID: 853071198}
+  gameOverText: {fileID: 1443610055}
+  collisionText: {fileID: 973589763}
 --- !u!114 &1984151036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4952,7 +4990,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1984151035}
-        m_MethodName: ReloadOnTouch
+        m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

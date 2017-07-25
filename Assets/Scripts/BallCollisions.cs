@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class BallCollisions : MonoBehaviour {
 
-    // Assuming only one instance of Ball exists
-    public int collisionCount = 0;
+    public int collisionCount;
     public Text collisionText;
+
+    private bool gameOver;
 
     void Start() {
         collisionCount = 0;
@@ -15,8 +16,20 @@ public class BallCollisions : MonoBehaviour {
 
     void OnCollisionEnter(Collision hit) {
         if (hit.gameObject.GetComponent<PointEvent>() != null) {
-            collisionCount++;
-            collisionText.text = "Total Points: " + collisionCount;
+            if (!gameOver) {
+                collisionCount++;
+                collisionText.text = "Total Points: " + collisionCount;
+            }
         }
+    }
+
+    public void Reset() {
+        collisionCount = 0;
+        collisionText.text = "Total Points: " + collisionCount;
+        gameOver = false;
+    }
+
+    public void GameOver() {
+        gameOver = true;
     }
 }

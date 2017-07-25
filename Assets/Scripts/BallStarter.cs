@@ -8,7 +8,6 @@ public class BallStarter : MonoBehaviour {
 
     private float force;
     private Rigidbody rigidBody;
-
     private bool buttonDown;
 
     void Start() {}
