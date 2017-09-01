@@ -699,6 +699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758}
   - component: {fileID: 2311}
+  - component: {fileID: 194}
   m_Layer: 8
   m_Name: Scene root
   m_TagString: Untagged
@@ -706,6 +707,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0c3851a23a9e94187acaf9dfebdcdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &195
 GameObject:
   m_ObjectHideFlags: 0
@@ -8145,7 +8157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseNativeGLTexturingIfAvailable: 0
   AllowNonRGBVideo: 1
-  QuitOnEscOrBack: 1
+  QuitOnEscOrBack: 0
   AutoStartAR: 1
   videoCParamName0: camera_para
   videoConfigurationWindows0: -showDialog -flipV

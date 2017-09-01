@@ -152,7 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f36f19ba4bc46c9a1a6697152694ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 10
+  forceMax: {x: 0, y: 0, z: 7}
+  forceStep: {x: 0, y: 0, z: 0.2}
+  threshold: 0.1
 --- !u!65 &52353099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3077,6 +3079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277133540}
   - component: {fileID: 1277133541}
+  - component: {fileID: 1277133542}
   m_Layer: 9
   m_Name: Scene root
   m_TagString: Untagged
@@ -3114,6 +3117,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   findMarkerTags: []
   _findMarkerMode: 0
+--- !u!114 &1277133542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1277133539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0c3851a23a9e94187acaf9dfebdcdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1349279971
 GameObject:
   m_ObjectHideFlags: 0
@@ -4583,7 +4597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseNativeGLTexturingIfAvailable: 0
   AllowNonRGBVideo: 1
-  QuitOnEscOrBack: 1
+  QuitOnEscOrBack: 0
   AutoStartAR: 1
   videoCParamName0: 
   videoConfigurationWindows0: -showDialog -flipV
