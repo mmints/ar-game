@@ -1,9 +1,7 @@
 #### TODO
 
 - Decide on custom markers
-- Scenes
-  - Candy World?
-  - Integrate Ice World (ARToolKit, Scripting)
+- Candy World Scene?
 - Important Features
   - Level switching
     - Menu vs. Markers
