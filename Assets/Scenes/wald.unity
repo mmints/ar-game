@@ -5831,8 +5831,8 @@ GameObject:
   m_Component:
   - component: {fileID: 341069956}
   - component: {fileID: 341069959}
-  - component: {fileID: 341069958}
   - component: {fileID: 341069957}
+  - component: {fileID: 341069958}
   m_Layer: 0
   m_Name: OOBKiller
   m_TagString: Untagged
@@ -5848,7 +5848,7 @@ Transform:
   m_GameObject: {fileID: 341069955}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 1.6100003}
-  m_LocalScale: {x: 9.182765, y: 9.182776, z: 9.182776}
+  m_LocalScale: {x: 97.49955, y: 0.30346137, z: 97.49967}
   m_Children: []
   m_Father: {fileID: 446854239}
   m_RootOrder: 4
@@ -5866,20 +5866,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverText: {fileID: 130935908}
   collisionText: {fileID: 287284786}
---- !u!64 &341069958
-MeshCollider:
+--- !u!65 &341069958
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 341069955}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &341069959
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -11062,7 +11060,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 632294673}
-  m_LocalRotation: {x: 0.13799526, y: 0.69351107, z: 0.6935108, w: 0.1379952}
+  m_LocalRotation: {x: 0.13799524, y: 0.693511, z: 0.6935107, w: 0.13799518}
   m_LocalPosition: {x: -0.4862105, y: -0.49611652, z: -0.08497219}
   m_LocalScale: {x: 7.7266655, y: 7.7266655, z: 7.7266655}
   m_Children: []
@@ -15373,7 +15371,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 927276530}
-  m_LocalRotation: {x: 0.13799526, y: 0.69351107, z: 0.6935108, w: 0.1379952}
+  m_LocalRotation: {x: 0.13799524, y: 0.693511, z: 0.6935107, w: 0.13799518}
   m_LocalPosition: {x: -0.05564723, y: -0.8475001, z: -0.06933288}
   m_LocalScale: {x: 3.7253115, y: 3.7253115, z: 3.7253115}
   m_Children: []
