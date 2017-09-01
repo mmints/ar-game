@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class BallStarter : MonoBehaviour {
 
-    public float maxForce;
+    public Vector3 forceMax = new Vector3(0.0f, 0.0f, 7.0f);
+    public Vector3 forceStep = new Vector3(0.0f, 0.0f, 0.2f);
+    public float threshold = 0.1f;
 
-    private float force;
+    private Vector3 force;
     private Rigidbody rigidBody;
     private bool buttonDown;
 
     void Start() {}
 
     void OnTriggerEnter(Collider ball) {
-        force = 0.0f;
+        force = new Vector3();
     }
 
     void OnTriggerStay(Collider ball) {
         rigidBody = ball.GetComponent<Rigidbody>();
-        if (buttonDown && force <= maxForce) {
-            force += 0.2f;
+        if (buttonDown &&
+             (Mathf.Abs(force.x - forceMax.x) > threshold ||
+              Mathf.Abs(force.y - forceMax.y) > threshold ||
+              Mathf.Abs(force.z - forceMax.z) > threshold)) {
+            force += forceStep;
             Debug.Log("Force: "  + force);
         } else {
-            rigidBody.AddForce(0, 0, force, ForceMode.Impulse);
+            rigidBody.AddForce(force.x, force.y,
+                force.z, ForceMode.Impulse);
         }
     }
 
