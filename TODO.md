@@ -1,19 +1,17 @@
 #### TODO
 
-- Decide on custom markers
-- Candy World Scene?
-- Important Features
-  - Level switching
-    - Menu vs. Markers
-  - Markers
-    - Multiple Markers per Scene
-    - Physical interaction
-      - Sync transformation over different marker scenegraphs
-      - Show/hide, detect when marker/subgraph root is tracked
-  - Device compatibility..
-- (Additional Features)
-  - Ball speed influence (snow, grass)
-  - Fog, Clouds
-  - Dynamic Elements
-    - Water
-    - Animals (snowman, deer)
+- Update Project to Unity 2017.2 Release (no Beta)
+- Tilting (_Mark_)
+- Marker Level switch (und zusatz buttons)
+    - Bilder für Szenen
+- Buttons texturieren (Szenenabhängig)
+- Flippers sollten Quader als phys mesh haben (_Pablo_)
+- "Total Points" Textur als 3D-Objekt in der Szene
+- ARUnity6 ausprobieren (_Mark_)
+- Candy World Scene
+    - Level bugs fixen (Normalen)
+    - Verhalten scripten (_Pablo_)
+- (Weitere Features)
+  - Ball Geschwindigkeit (Schnee, Grass)
+  - Nebel, Wolken
+  - Wasser, Tiere
