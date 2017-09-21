@@ -4,9 +4,9 @@
 - Tilting (_Mark_)
 - Marker Level switch (und zusatz buttons)
     - Bilder für Szenen
-- Buttons texturieren (Szenenabhängig)
+- Buttons texturieren (Szenenabhängig) (_JanF_)
 - Flippers sollten Quader als phys mesh haben (_Pablo_)
-- "Total Points" Textur als 3D-Objekt in der Szene
+- "Total Points" Textur als 3D-Objekt in der Szene (_JanF_)(try)
 - ARUnity6 ausprobieren (_Mark_)
 - Candy World Scene
     - Level bugs fixen (Normalen)
