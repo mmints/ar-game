@@ -6,7 +6,7 @@
     - Bilder für Szenen
 - Buttons texturieren (Szenenabhängig) (_JanF_)
 - Flippers sollten Quader als phys mesh haben (_Pablo_)
-- "Total Points" Textur als 3D-Objekt in der Szene (_JanF_)(try)
+- "Total Points" Textur als 3D-Objekt in der Szene (_JanF_) (done)
 - ARUnity6 ausprobieren (_Mark_)
 - Candy World Scene
     - Level bugs fixen (Normalen)
