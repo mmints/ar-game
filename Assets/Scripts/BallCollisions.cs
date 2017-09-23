@@ -7,11 +7,14 @@ public class BallCollisions : MonoBehaviour {
 
     public int collisionCount;
     public Text collisionText;
+	TextMesh textObj;
 
     private bool gameOver;
 
     void Start() {
         collisionCount = 0;
+		textObj = GameObject.Find("Score3D").GetComponent<TextMesh>();
+		textObj.text = collisionCount.ToString();
     }
 
     void OnCollisionEnter(Collision hit) {
@@ -19,6 +22,7 @@ public class BallCollisions : MonoBehaviour {
             if (!gameOver) {
                 collisionCount++;
                 collisionText.text = "Total Points: " + collisionCount;
+				textObj.text = collisionCount.ToString();
             }
         }
     }
@@ -26,6 +30,7 @@ public class BallCollisions : MonoBehaviour {
     public void Reset() {
         collisionCount = 0;
         collisionText.text = "Total Points: " + collisionCount;
+		textObj.text = collisionCount.ToString();
         gameOver = false;
     }
 
