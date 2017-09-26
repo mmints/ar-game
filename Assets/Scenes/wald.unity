@@ -6810,7 +6810,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!64 &389584875
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7846,7 +7846,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!4 &451795432
 Transform:
   m_ObjectHideFlags: 0
@@ -11066,7 +11066,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 632294673}
-  m_LocalRotation: {x: 0.13799524, y: 0.693511, z: 0.6935107, w: 0.13799518}
+  m_LocalRotation: {x: 0.13799526, y: 0.69351107, z: 0.6935108, w: 0.1379952}
   m_LocalPosition: {x: -0.4862105, y: -0.49611652, z: -0.08497219}
   m_LocalScale: {x: 7.7266655, y: 7.7266655, z: 7.7266655}
   m_Children: []
@@ -15504,7 +15504,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 927276530}
-  m_LocalRotation: {x: 0.13799524, y: 0.693511, z: 0.6935107, w: 0.13799518}
+  m_LocalRotation: {x: 0.13799526, y: 0.69351107, z: 0.6935108, w: 0.1379952}
   m_LocalPosition: {x: -0.05564723, y: -0.8475001, z: -0.06933288}
   m_LocalScale: {x: 3.7253115, y: 3.7253115, z: 3.7253115}
   m_Children: []
@@ -22863,7 +22863,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5410134, guid: d8708f588ab7a4994806b9c87328abb5, type: 2}
       propertyPath: m_Mass
-      value: 0.3
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5410134, guid: d8708f588ab7a4994806b9c87328abb5, type: 2}
       propertyPath: m_CollisionDetection
@@ -25142,11 +25142,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4205302638535408, guid: 8937cbaec0af74e40bc74412dbf59ee9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.295
+      value: 0.311
       objectReference: {fileID: 0}
     - target: {fileID: 4205302638535408, guid: 8937cbaec0af74e40bc74412dbf59ee9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.676
+      value: 0.284
       objectReference: {fileID: 0}
     - target: {fileID: 4205302638535408, guid: 8937cbaec0af74e40bc74412dbf59ee9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -25170,7 +25170,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4205302638535408, guid: 8937cbaec0af74e40bc74412dbf59ee9, type: 2}
       propertyPath: m_LocalScale.z
-      value: 2.9457114
+      value: 7.53
       objectReference: {fileID: 0}
     - target: {fileID: 4205302638535408, guid: 8937cbaec0af74e40bc74412dbf59ee9, type: 2}
       propertyPath: m_LocalScale.x

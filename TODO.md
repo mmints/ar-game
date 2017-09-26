@@ -6,7 +6,7 @@
     - Bilder für Szenen aussuchen (_JanA_)
     - Script Logik (_Pablo_)
 - Buttons texturieren, szenenabhängig (_JanF_)
-- Flippers sollten Quader als phys mesh haben (_Pablo_)
+- ~~Wald scene flippers beheben (_Pablo_)~~
 - ~~"Total Points" Textur als 3D-Objekt in der Szene (_JanF_)~~
 - ARUnity6 ausprobieren (_Mark_)
 - Candy World Scene
