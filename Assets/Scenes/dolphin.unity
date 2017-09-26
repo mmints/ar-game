@@ -935,8 +935,8 @@ MonoBehaviour:
   videoConfigurationWindowsStore1: -device=WinMC -format=BGRA
   videoConfigurationLinux1: 
   BackgroundLayer1: 9
-  NearPlane: 0.01
-  FarPlane: 50000
+  NearPlane: 0.1
+  FarPlane: 500
   ContentRotate90: 0
   ContentFlipH: 0
   ContentFlipV: 0
