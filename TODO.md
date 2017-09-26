@@ -3,7 +3,7 @@
 - Update Project to Unity 2017.2 Release (no Beta)
 - Tilting (_Mark_)
 - Marker Level switch (zusätzlich Buttons)
-    - Bilder für Szenen aussuchen
+    - Bilder für Szenen aussuchen (_JanA_)
     - Script Logik (_Pablo_)
 - Buttons texturieren, szenenabhängig (_JanF_)
 - Flippers sollten Quader als phys mesh haben (_Pablo_)
