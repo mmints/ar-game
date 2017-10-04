@@ -25,6 +25,8 @@ public class ResetLevel : MonoBehaviour {
         if (collisionComponent != null) {
             collisionComponent.Reset();
         }
+
+        ball.GetComponent<AccelerometerController>().counter = 0;
         gameOverText.text = string.Empty;
         collisionText.color = fontColor;
     }

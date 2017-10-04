@@ -6,24 +6,25 @@ using UnityEngine;
 
 public class AccelerometerController : MonoBehaviour {
 
-	public float force = 100;
+	public float force;
+    public int maxCount;
 	private float acc;
 	private Rigidbody ball;
 	private float vz;
-
-	void Start() {
+    public int counter;
+    
+    void Start() {
 		ball = GetComponent<Rigidbody>();
+        counter = 0;
 	}
 
 	void Update ()
 	{
 		acc = Input.acceleration.x;
 		vz = acc / -acc;
-
-		if (acc > 0.2 || acc < -0.2) {
+		if ((acc > 0.2 || acc < -0.2) && (counter < maxCount)) {
 			ball.AddForce (vz * force, 0, 0, ForceMode.Impulse);
+            counter++;
 		}
-
-
 	}
 }
