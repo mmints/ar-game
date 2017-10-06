@@ -10,6 +10,7 @@
 		Blend SrcAlpha OneMinusSrcAlpha
 		Pass {
 			Color [_Color]
+			ColorMaterial AmbientAndDiffuse
 			SetTexture [_MainTex] {
 				combine primary, texture * primary
 			}
