@@ -5,36 +5,47 @@ using UnityEngine.UI;
 
 public class BallCollisions : MonoBehaviour {
 
-    public int collisionCount;
-    public Text collisionText;
-	TextMesh textObj;
+    public TextMesh score3D;
 
+    private int points;
     private bool gameOver;
 
     void Start() {
-        collisionCount = 0;
-		textObj = GameObject.Find("Score3D").GetComponent<TextMesh>();
-		textObj.text = collisionCount.ToString();
+        points = 0;
+        updateText();
     }
 
     void OnCollisionEnter(Collision hit) {
-        if (hit.gameObject.GetComponent<PointEvent>() != null) {
-            if (!gameOver) {
-                collisionCount++;
-                collisionText.text = "Total Points: " + collisionCount;
-				textObj.text = collisionCount.ToString();
+        if (!gameOver) {
+            var com = hit.gameObject.GetComponent<PointEvent>();
+            if (com != null) {
+                ++points;
+                updateText();
             }
         }
     }
 
     public void Reset() {
-        collisionCount = 0;
-        collisionText.text = "Total Points: " + collisionCount;
-		textObj.text = collisionCount.ToString();
+        points = 0;
         gameOver = false;
+        updateText();
     }
 
     public void GameOver() {
         gameOver = true;
+        updateText();
+    }
+
+    private void updateText() {
+        if (gameOver) {
+            score3D.color = Color.red;
+            score3D.fontSize = 70;
+            score3D.text = "Game Over!\n" +
+                "Score: " + points;
+        } else {
+            score3D.color = Color.white;
+            score3D.fontSize = 100;
+            score3D.text = "Points: " + points;
+        }
     }
 }
