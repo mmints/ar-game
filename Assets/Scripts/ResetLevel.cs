@@ -9,11 +9,6 @@ public class ResetLevel : MonoBehaviour {
     public Rigidbody ball;
     public GameObject spawnPoint;
 
-    public Text gameOverText;
-    public Text collisionText;
-
-    private Color fontColor = new Color32(0x55, 0x55, 0x55, 0xFF);
-
     public void Reset() {
         var ballTransform = ball.transform;
         var spawnTransform = spawnPoint.transform;
@@ -25,9 +20,9 @@ public class ResetLevel : MonoBehaviour {
         if (collisionComponent != null) {
             collisionComponent.Reset();
         }
-
-        ball.GetComponent<AccelerometerController>().counter = 0;
-        gameOverText.text = string.Empty;
-        collisionText.color = fontColor;
+        var accelComponent = ball.GetComponent<AccelerometerController>();
+        if (accelComponent != null) {
+            accelComponent.Reset();
+        }
     }
 }

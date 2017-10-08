@@ -82,9 +82,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089e7df3fd29445938f4f964f9499597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 20
+  force: 10
   maxCount: 3
-  counter: 0
 --- !u!1 &137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,8 +1402,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 2065}
   spawnPoint: {fileID: 471}
-  gameOverText: {fileID: 0}
-  collisionText: {fileID: 0}
 --- !u!114 &2348
 MonoBehaviour:
   m_ObjectHideFlags: 0

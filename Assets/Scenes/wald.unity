@@ -19321,8 +19321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 1186354998}
   spawnPoint: {fileID: 1349252556}
-  gameOverText: {fileID: 0}
-  collisionText: {fileID: 0}
 --- !u!1 &1114529109
 GameObject:
   m_ObjectHideFlags: 0
@@ -22761,6 +22759,16 @@ Prefab:
       propertyPath: score3D
       value: 
       objectReference: {fileID: 673355310}
+    - target: {fileID: 114619732920002738, guid: d8708f588ab7a4994806b9c87328abb5,
+        type: 2}
+      propertyPath: invertAxis.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114619732920002738, guid: d8708f588ab7a4994806b9c87328abb5,
+        type: 2}
+      propertyPath: invertAxis.z
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114599891559490838, guid: d8708f588ab7a4994806b9c87328abb5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d8708f588ab7a4994806b9c87328abb5, type: 2}

@@ -1177,8 +1177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 1955129336}
   spawnPoint: {fileID: 1768176011}
-  gameOverText: {fileID: 0}
-  collisionText: {fileID: 0}
 --- !u!114 &2348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4607,7 +4605,6 @@ GameObject:
   - component: {fileID: 1955129338}
   - component: {fileID: 1955129337}
   - component: {fileID: 1955129336}
-  - component: {fileID: 1955129335}
   - component: {fileID: 1955129334}
   - component: {fileID: 1955129340}
   m_Layer: 8
@@ -4644,18 +4641,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score3D: {fileID: 1132505333}
---- !u!114 &1955129335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114583207272656808, guid: 1b051f3b6b2372d4591c13e56c53e14d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1955129332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8cb4080d9701444da35bd76cd5e29c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1955129336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4737,9 +4722,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089e7df3fd29445938f4f964f9499597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 100
-  maxCount: 0
-  counter: 0
+  thresholdLow: -0.04
+  thresholdHigh: 0.04
+  swapYZ: 0
+  force: 500
+  maxCount: 3
 --- !u!1 &1972114876
 GameObject:
   m_ObjectHideFlags: 0
