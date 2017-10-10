@@ -4,15 +4,16 @@
 - ~~Tilting (_Mark_)~~
 - Marker Level switch (zusätzlich Buttons)
     - Bilder für Szenen aussuchen (_JanA_)
-    - Script Logik (_Pablo_)
+    - ~~Script Logik (_Pablo_)~~
 - Buttons texturieren, szenenabhängig (_JanF_)
 - ~~Wald scene flippers beheben (_Pablo_)~~
 - ~~"Total Points" Textur als 3D-Objekt in der Szene (_JanF_)~~
-- ARUnity6 ausprobieren (_Mark_)
 - Candy World Scene (importiert)
     - ~~Level bugs fixen (Normalen)~~
     - Verhalten scripten (_Pablo_)
 - (Weitere Features)
-  - Ball Geschwindigkeit (Schnee, Grass)
+  - Sound Effekte? (Tilt, Bumper, ..)
   - Nebel, Wolken
   - Wasser, Tiere
+  - Ball Geschwindigkeit (Schnee, Grass)
+
