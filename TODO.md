@@ -1,19 +1,12 @@
 #### TODO
 
-- Update Project to Unity 2017.2 Release (no Beta)
-- ~~Tilting (_Mark_)~~
-- Marker Level switch (zusätzlich Buttons)
-    - Bilder für Szenen aussuchen (_JanA_)
-    - ~~Script Logik (_Pablo_)~~
-- Buttons texturieren, szenenabhängig (_JanF_)
-- ~~Wald scene flippers beheben (_Pablo_)~~
-- ~~"Total Points" Textur als 3D-Objekt in der Szene (_JanF_)~~
-- Candy World Scene (importiert)
-    - ~~Level bugs fixen (Normalen)~~
+- Bilder für Szenen-Marker aussuchen (_JanA_)
+- Buttons texturieren, szenenabhängig (_Pablo_)
+- Candy World Scene fixen
+    - Ursprung Objekte korrigieren
+    - Anzahl Dreiecke reduzieren für Eis, Donuts
     - Verhalten scripten (_Pablo_)
-- (Weitere Features)
+- Weitere Features
   - Sound Effekte? (Tilt, Bumper, ..)
-  - Nebel, Wolken
-  - Wasser, Tiere
+  - Nebel, Wolken, Wasser
   - Ball Geschwindigkeit (Schnee, Grass)
-
